@@ -11,8 +11,9 @@ export const AppStyle = styled(Box)<IAppStyle>(({ theme, mobile }) => ({
 }));
 
 export const MainInfoAppStyle = styled(Box)<IAppStyle>(({ theme, mobile }) => ({
-  height: '100vh',
-  backgroundImage: 'url(https://nt.ua/Media/Default/img/profession-frontenf-dev_ru.png)',
+  minHeight: '900px',
+  backgroundImage:
+    'url(https://programmerblog.net/wp-content/uploads/2021/02/what-is-front-end-development-3.png)',
   backgroundRepeat: 'no-repeat',
   backgroundSize: mobile ? 'cover' : 'contain',
   backgroundColor: mobile ? '#f2efef' : 'none',
