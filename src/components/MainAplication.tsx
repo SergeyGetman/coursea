@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
 import { GeneralInterface } from '../types/types';
-import styles from '../styles/globalStyle.module.css';
+import { useMediaQuery } from '@mui/material';
+import { MainInfoAppStyle, MainInfoBlockStyle } from '../AppStyle.style';
 
 const MainAplication: FC<GeneralInterface> = ({ children }) => {
+  const isMobile = useMediaQuery('(min-width:600px)');
   return (
-    <div>
-      <div className={styles.mainIfoBlock} />
-      <div>{children}</div>
-    </div>
+    <MainInfoAppStyle mobile={isMobile}>
+      <MainInfoBlockStyle mobile={isMobile}>{children}</MainInfoBlockStyle>
+    </MainInfoAppStyle>
   );
 };
 
